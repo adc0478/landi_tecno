@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>tecnologia</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <button class="btn" id="up" onclick="paginar(1)"></button>
+    <button class="btn" id="down" onclick="paginar(-1)"></button>
+    <nav class="navbar">
+      <ul>
+        <li><button onclick="ejecutar_pagina(1)">Inicio</button> </li>
+        <li><button onclick="ejecutar_pagina(2)">formulario contacto</button></li>
+      </ul>
+    </nav>
+    <div class="screem">
+
+      <header class="barra">
+        <button value="2" id="btn_menu" onclick="menu()"></button>
+        <h1 class="title"><strong>Mi</strong> pagina</h1>
+      </header>
+      <aside> 
+        <div class="cont_left">
+          <div class="info">
+            <div class="contenido">
+             
+            </div>
+          </div> 
+
+          <div class="redes">
+            <a href=""><img src="img/redes/facebook-f-brands.svg" alt="Facebook"></a>
+            <a href=""><img src="img/redes/google-plus-g-brands.svg" alt="Google_plus"></a>
+            <a href=""><img src="img/redes/twitter-brands.svg" alt="Twitter"></a>
+            <a href=""><img src="img/redes/pinterest-p-brands.svg" alt="Pinterest"></a>
+            <a href=""><img src="img/redes/share-nodes-solid.svg" alt="Share"></a>
+            <a href=""><img src="img/redes/vimeo-v-brands.svg" alt="Vimeo"></a>
+          </div>
+
+        </div> 
+        <div class="cont_right">
+          <div class="display">
+            <div class="contenido2"></div> 
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+  <script charset="utf-8">
+    var porcentaje =0;
+      var max_procentaje = 200; 
+      var pos_actual = 0;
+      var max_pagina = 2;
+  </script>
+  <script src="componentes.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</html>

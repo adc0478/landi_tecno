@@ -1,0 +1,270 @@
+body{
+  margin: 0px;
+  padding:0px;
+  max-width:100vw;
+  overflow:hidden;
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+}
+h1{
+ font-size:1.2rem;
+ font-weight:lighter; 
+}
+.navbar{
+  display:none;
+}
+nav ul li button{
+  border:none;
+  color:white;
+  font-weight:bold;
+  background-color: rgba(1,1,1,0);
+}
+nav ul li button:hover{
+  cursor:pointer;
+}
+nav ul li{
+  list-style: none;
+  width:100%;
+  padding:3px;
+  box-sizing: border-box;
+}
+nav ul li:hover{
+  animation-name: animar_lista;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes animar_lista{
+  to{
+    background-color: rgba(1,1,1,.4);
+  }
+}
+#mostrar_menu{
+  height: 100vh;
+  width: 20vw;
+  position: absolute;
+  top:60px;
+  left:0px;
+  background-color:rgb(26, 141, 190);
+  box-shadow:0px 10px 3px black; 
+  border-radius:0px 5px 0px 0px;
+  z-index: 1;
+  display:block;
+}
+.btn{
+  width:20px;
+  height:20px;
+  border:none;
+  border-radius:50%;
+  background-color:rgb(236, 219, 164); 
+  z-index: 1;
+}
+#up{
+  position:absolute;
+  top:70px;
+  right:20px;
+}
+#down{
+  position:absolute;
+  bottom:50px;
+  right:20px;
+}
+.screem{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
+}
+header{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header button{
+  width: 30px;
+  height: 30px;
+  margin-left:10px;
+  border: none;
+}
+header h1{
+  margin-left:50px;
+}
+aside{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+}
+.cont_left{
+  position: relative;
+}
+.info{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+}
+.info h1{
+  font-size: 2rem;
+}
+.redes{
+  position: absolute;
+  bottom: 10%;
+  height: 25px;
+  width: 50%;
+  left: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.redes a{
+  width:20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.redes a img{
+  height: 100%;
+  width: 100%;
+}
+.contenido {
+  width: 60%;
+  margin: 0 auto;
+  animation-name: animar_ingreso;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#contenido_salida{
+  animation-name: animar_salida;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.contenido p{
+  margin-bottom: 50px;
+  font-size:1.1rem;
+}
+.btn_big{
+  background-color:rgb(26, 141, 190) ; 
+  padding: 20px;
+  border-radius:5px;
+  color: white;
+  text-decoration: none;
+}
+.btn_big img{
+  width: 20px;
+  height:20px;
+}
+.btn_big:hover{
+  animation-name: animar_btn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes animar_btn{
+  to{
+    background-color:rgba(26, 141, 190, .3) ;
+    color:black;
+  }
+}
+@keyframes animar_ingreso{
+  from{
+    transform: translateY(150%);
+  }
+  to{ 
+    transform: translateY(-10%);
+  }
+}
+@keyframes animar_salida{
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(-200%);
+  }
+}
+.display{
+  width:40%;
+  height: 70%;
+  margin: 0 auto;
+  border: 20px solid rgba(1,1,1,.6);
+  box-shadow: 1px 5px 10px rgba(1,1,1,.3);
+  border-radius:10px;
+  overflow: hidden;
+}
+.display img{
+  animation-name: animar_ingreso;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 100%;
+  height: 100%;
+} 
+form{
+  display: grid;
+  grid-gap:10px;
+}
+form div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:10px;
+}
+form .input{
+  height: 30px;
+}
+form .input, textarea{
+  background-color:rgba(26, 141, 190, .1);
+  border-radius: 5px;
+  border:none;
+}
+form .btn_small{
+  height: 30px;
+  width: 100px;
+  border:none;
+  background-color: rgba(26,141,190,1);
+  color:white;
+}
+form .btn_small:hover{
+  animation-name:animar_btn;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+form input:focus{
+  outline: none;
+  animation-name:animar_input;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+form textarea:focus{
+  outline:none;
+  animation-name:animar_input;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes animar_input{
+  to{
+    background-color:rgba(26,141,190,.3);
+  }
+}
+/*Movil */
+
+@media screen and (max-width: 768px){
+  aside{
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+  .cont_right{
+    display:none;
+  }
+  #mostrar_menu{
+    width: 50vw;
+  }
+  header h1{
+    margin-left:0px;
+    margin: 0 auto;
+  }
+  .redes{
+    bottom:20%;
+    left: 10%;
+  }
+  form div{
+   grid-template-columns: 1fr;
+  }
+}
